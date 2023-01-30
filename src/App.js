@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { TableAxios } from './tables/TableAxios';
+import { TableBasic } from './tables/TableBasic';
+import { TableJson } from './tables/TableJson';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{padding: 30, display: 'flex', flexDirection: 'column', gap: 20}}>
+      <div><h1 style={{textAlign: 'center'}}>MIU Datatable and axios</h1></div>
+
+      <TableBasic />
+      <TableJson />
+      <TableAxios />
     </div>
   );
 }
